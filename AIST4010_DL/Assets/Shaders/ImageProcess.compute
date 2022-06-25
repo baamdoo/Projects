@@ -1,0 +1,17 @@
+#pragma kernel PreProcess
+#pragma kernel PostProcess
+
+Texture2D<half4> Input;
+RWTexture2D<half4> Result;
+
+[numthreads(8, 8, 1)]
+void PreProcess(uint3 id : SV_DispatchThreadID)
+{
+    Result[id.xy] = half4((Input[id.xy].x * 255.0h), (Input[id.xy].y * 255.0h), (Input[id.xy].z * 255.0h), 1.0h);
+}
+
+[numthreads(8, 8, 1)]
+void PostProcess(uint3 id : SV_DispatchThreadID)
+{
+    Result[id.xy] = half4((clamp(Input[id.xy].x, 0.0f, 255.0f) / 255.0f), (clamp(Input[id.xy].y, 0.0f, 255.0f) / 255.0f), (clamp(Input[id.xy].z, 0.0f, 255.0f) / 255.0f), 1.0h);
+}
