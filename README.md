@@ -1,2 +1,2 @@
 # Projects
-Collections of project in CUHK courses
+Collection of project in CUHK courses
