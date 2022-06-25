@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+CSCI3260_Computer_Graphics/CourseProject/x64
+CSCI3260_Computer_Graphics/.vs
+CSCI3260_Computer_Graphics/CourseProject/Debug
+CSCI3260_Computer_Graphics/Debug
+CSCI3260_Computer_Graphics/x64
