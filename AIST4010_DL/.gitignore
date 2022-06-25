@@ -7,8 +7,10 @@ Temp/
 Obj/
 
 UnityGenerated/
+
 Library/
 
+build/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -33,6 +35,8 @@ ExportedObj/
 *.unityproj
 
 *.booproj
+
+.vs
 
 
 
